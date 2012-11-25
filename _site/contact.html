@@ -1,17 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="en" ng-app='myModule'>
+<html lang="en" ng-app='App'>
   <head> <meta charset="utf-8">
 <title>Sidney Burks</title>
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
-<script src="/javascripts/app.js"></script>
-<script src="/javascripts/controllers.js"></script>
  </head>
-  <body>
+  <body ng-controller="AppCtrl">
     <div class="container">
-      <p>Nothing here [['yet' + '!']]</p>
       <div id="header" class="row">
   <div class="span4">
     <h1 class="logo"><a href="/">Sidney Burks</a></h1>
@@ -71,6 +67,8 @@
 </div>
 
 
+      <div ng-view></div>
+
       <div class="footer">
   <div class="row">
     <div class="span6">
@@ -103,6 +101,10 @@
   })();
 
 </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+<script src="/javascripts/app.js"></script>
+<script src="/javascripts/controllers.js"></script>
 
   </body>
 </html>

@@ -1,17 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="en" ng-app='myModule'>
+<html lang="en" ng-app='App'>
   <head> <meta charset="utf-8">
 <title>Sidney Burks</title>
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
-<script src="/javascripts/app.js"></script>
-<script src="/javascripts/controllers.js"></script>
  </head>
-  <body>
+  <body ng-controller="AppCtrl">
     <div class="container">
-      <p>Nothing here [['yet' + '!']]</p>
       <div id="header" class="row">
   <div class="span4">
     <h1 class="logo"><a href="/">Sidney Burks</a></h1>
@@ -38,37 +34,18 @@
   <div class="span12">
     <h3>Recent Work</h3>
   </div>
-  <div class="module span4">
-  <a href="portfolio-single.html"><img src="img/atoms_mot.small.jpg" alt="Placeholder" class="thumbnail"></a>
-  <h3><a href="portfolio-single.html">Quantum Memory for Squeezed Light</a></h3>
-  <p>Developing the building blocks for the computers of tomorrow.
-  Storing information onto atoms using light</p>
+
+  <div ng-repeat="project in projects" class="module span4">
+  <a href="[[ project.page ]]"><img ng-src="[[ project.thumbnail ]]" alt="[[ project.alt ]]" class="thumbnail"></a>
+  <h3><a href="[[ project.page ]]">[[ project.title ]]</a></h3>
+  <p>[[ project.description ]]</p>
 </div>
 
-  <div class="module span4">
-  <a href="portfolio-single.html"><img src="img/flowers-lg.jpg" alt="Placeholder" class="thumbnail"></a>
-  <h3><a href="portfolio-single.html">"Roger" Speech Transcription</a></h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-</div>
-
-  <div class="module span4">
-  <a href="portfolio-single.html"><img src="img/leaves-lg.jpg" alt="Placeholder" class="thumbnail"></a>
-  <h3><a href="portfolio-single.html">Ruby on Rails</a></h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-</div>
-
-  <!--<div class="module span3">
-  <a href="portfolio-single.html"><img src="img/snail-lg.jpg" alt="Placeholder" class="thumbnail"></a>
-  <h3><a href="portfolio-single.html">iOS Mobile Application</a></h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.</p>
-</div>
--->
 </div>
 
 
+
+      <div ng-view></div>
 
       <div class="footer">
   <div class="row">
@@ -102,6 +79,10 @@
   })();
 
 </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+<script src="/javascripts/app.js"></script>
+<script src="/javascripts/controllers.js"></script>
 
   </body>
 </html>

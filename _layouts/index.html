@@ -2,18 +2,20 @@
 title: Sidney Burks
 ---
 <!DOCTYPE HTML>
-<html lang="en" ng-app='myModule'>
+<html lang="en" ng-app='App'>
   <head> {% include head.html %} </head>
-  <body>
+  <body ng-controller="AppCtrl">
     <div class="container">
-      <p>Nothing here [['yet' + '!']]</p>
       {% include header.html %}
 
       {{ content }}
+
+      <div ng-view></div>
 
       {% include footer.html %}
     </div>
     {% include background.html %}
     {% include google_analytics.html %}
+    {% include javascripts.html %}
   </body>
 </html>
