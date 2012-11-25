@@ -1,35 +1,21 @@
 ---
+layout: index
 title: Sidney Burks
 ---
-<!DOCTYPE HTML>
-<html>
-<head>
-  {% include head.html %}
-</head>
+<div class="row">
+  <div class="span12">
+    <div class="hero-unit">
+      <!-- <h2 class="lead">Personal page and recent projects</h2> -->
+    </div>
+  </div>
+</div>	
+<div class="row">
+  <div class="span12">
+    <h3>Recent Work</h3>
+  </div>
+  {% include portfolio_atoms.html %}
+  {% include portfolio_roger.html %}
+  {% include portfolio_rails.html %}
+  <!--{% include portfolio_ios.html %}-->
+</div>
 
-<body>
-	<div class="container">
-    {% include header.html %}
-		<div class="row">
-			<div class="span12">
-				<div class="hero-unit">
-					<h2 class="lead">Personal page and recent projects</h2>
-				</div>
-			</div>
-		</div>	
-		<div class="row">
-			<div class="span12">
-				<h3>Recent Work</h3>
-			</div>
-      {% include portfolio_atoms.html %}
-      {% include portfolio_roger.html %}
-      {% include portfolio_rails.html %}
-      <!--{% include portfolio_ios.html %}-->
-		</div>
-
-    {% include footer.html %}
-	</div>
-  {% include background.html %}
-
-</body>
-</html>
