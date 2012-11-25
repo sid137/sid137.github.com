@@ -16,33 +16,11 @@
   <div class="span8">
     <ul class="navigation">
       <li><a target="_blank" href="http://www.sid137.com">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </div>
-
-
-      <div class="row">
-  <div class="span12">
-    <div class="hero-unit">
-      <!-- <h2 class="lead">Personal page and recent projects</h2> -->
-    </div>
-  </div>
-</div>	
-<div class="row">
-  <div class="span12">
-    <h3>Recent Work</h3>
-  </div>
-
-  <div ng-repeat="project in projects" class="module span4">
-  <a href="[[ project.page ]]"><img ng-src="[[ project.thumbnail ]]" alt="[[ project.alt ]]" class="thumbnail"></a>
-  <h3><a href="[[ project.page ]]">[[ project.title ]]</a></h3>
-  <p>[[ project.description ]]</p>
-</div>
-
-</div>
-
 
 
       <div ng-view></div>

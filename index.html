@@ -1,19 +1,19 @@
 ---
-layout: index
 title: Sidney Burks
 ---
-<div class="row">
-  <div class="span12">
-    <div class="hero-unit">
-      <!-- <h2 class="lead">Personal page and recent projects</h2> -->
+<!DOCTYPE HTML>
+<html lang="en" ng-app='App'>
+  <head> {% include head.html %} </head>
+  <body ng-controller="AppCtrl">
+    <div class="container">
+      {% include header.html %}
+
+      <div ng-view></div>
+
+      {% include footer.html %}
     </div>
-  </div>
-</div>	
-<div class="row">
-  <div class="span12">
-    <h3>Recent Work</h3>
-  </div>
-
-  {% include portfolio_template.html %}
-</div>
-
+    {% include background.html %}
+    {% include google_analytics.html %}
+    {% include javascripts.html %}
+  </body>
+</html>
