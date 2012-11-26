@@ -1,0 +1,28 @@
+<script type="text/ng-template" id="project_detail.html">
+  <div class="row">
+    <div class="span8">
+      <div class="row">
+        <div class="span8 portfolio-large"><img ng-src="[[ project.main_image ]]" alt="Placeholder" class="thumbnail"></div>
+      </div>
+      <div class="row">
+        <div ng-repeat="image in project.images" class="span2 portfolio-thumb-small">
+          <a href="#"><img ng-src="[[ image.src ]]" alt="[[ image.alt ]]" class="thumbnail"></a>
+        </div>
+      </div>
+    </div>
+    <div class="span3 project-info">
+      <ul class="pager">
+        <li class="previous">
+          <a href="#">&larr; Previous</a>
+        </li>
+        <li class="next">
+          <a href="#">Next &rarr;</a>
+        </li>
+      </ul>
+      <h2>[[ project.title ]]</h2>
+      <div ng-bind-html-unsafe="project.description"></div>
+      <p><i class="icon-list icon-white"></i> <strong>Categories:</strong> <a href="/">Books</a></p>
+      <p><i class="icon-tag icon-white"></i> <strong>Tags:</strong> <a href="/">green</a>, <a href="/">stories</a>, <a href="/">fantasy</a></p>
+    </div>
+  </div>
+</script>

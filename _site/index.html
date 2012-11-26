@@ -40,6 +40,135 @@
 </div>
 
     </div>
+    <script type="text/ng-template" id="about.html">
+  <div class="row">
+    <div class="span12">
+      <h2>About Me</h2>
+      <div class="row">
+        <div class="span4">
+          <p>
+            Is currently working as a technology consultant, in web and mobile
+            projects involving Ruby on Rails, and Asterisk PBX.
+          </p>
+          <p>
+            He has consulted for several early-stage startups in Silicon
+            Valley, and in Paris, France - both for technological development,
+            and architectural planning.
+          </p>
+        </div>
+        <div class="span4">
+          <p>
+            He studied Physics and Math as an undergrad at MIT, and then
+            research in the Cognitive Neuroscience lab of Yuhong Jiang at
+            Harvard University.
+          </p>
+            
+          <p>
+            He then moved to Paris, France, there obtaining a 
+            PhD in Quantum Optics from the University of Paris VI,  
+            as well as a Diplome d'Ingenieur, from the Ecole des Mines de Paris.
+          </p>
+        </div>
+        <div class="span4">
+          <p>
+            <img src="img/sidney.burks.bio.jpg" class="thumbnail" alt="About Me">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="contact.html">
+  <div class="row">
+    <div class="span12">
+      <div class="span3">
+        <div class="row">
+            <h3>Connect With Me</h3>
+            <ul class="nav nav-vertical">
+              <li><a target="_blank" href="[[ links.google_plus_url ]]">Google +</a></li>
+              <li><a target="_blank" href="[[ links.twitter_url ]]">Twitter</a></li>
+              <li><a target="_blank" href="[[ links.linked_in_url ]]">Linked In</a></li>
+              <li><a target="_blank" href="[[ links.github_url ]]">Github</a></li>
+              <li><a target="_blank" href="[[ links.stack_overflow_url ]]">Stack Overflow</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="span8">
+        <form method="post">
+  <fieldset>
+    <div class="clearfix">	
+      <label>Your Name:</label>
+      <input tabindex="1" name="name" type="text" class="span5" ng-model="form_name">	
+    </div>
+    <div class="clearfix">
+      <label>Your Email:</label>
+      <input tabindex="2" name="email" type="text" class="span5" ng-model="form_email"> 
+    </div>
+    <div class="clearfix">
+      <label>Your Comment:</label>
+      <textarea name="comment" rows="8" tabindex="5" class="span5 input-xlarge" ng-model="form_body"></textarea>
+    </div>
+    <input name="submit" tabindex="5" type="submit" value="Post Comment" class="btn btn-inverse btn-large" ng-click="SendMessage()">
+  </fieldset>
+</form>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="main.html">
+  <div class="row">
+    <div class="span12">
+      <div class="hero-unit">
+        <!-- <h2 class="lead">Personal page and recent projects</h2> -->
+      </div>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="span12">
+      <h3>Recent Work</h3>
+    </div>
+
+    <div ng-repeat="project in projects" class="module span4">
+      <a href="[[ project.page ]]"><img ng-src="[[ project.thumbnail ]]" alt="[[ project.alt ]]" class="thumbnail"></a>
+      <h3><a href="[[ project.page ]]">[[ project.title ]]</a></h3>
+      <p>[[ project.description ]]</p>
+    </div>
+  </div>
+</script>
+
+<script type="text/ng-template" id="project_detail.html">
+  <div class="row">
+    <div class="span8">
+      <div class="row">
+        <div class="span8 portfolio-large"><img ng-src="[[ project.main_image ]]" alt="Placeholder" class="thumbnail"></div>
+      </div>
+      <div class="row">
+        <div ng-repeat="image in project.images" class="span2 portfolio-thumb-small">
+          <a href="#"><img ng-src="[[ image.src ]]" alt="[[ image.alt ]]" class="thumbnail"></a>
+        </div>
+      </div>
+    </div>
+    <div class="span3 project-info">
+      <ul class="pager">
+        <li class="previous">
+          <a href="#">&larr; Previous</a>
+        </li>
+        <li class="next">
+          <a href="#">Next &rarr;</a>
+        </li>
+      </ul>
+      <h2>[[ project.title ]]</h2>
+      <div ng-bind-html-unsafe="project.description"></div>
+      <p><i class="icon-list icon-white"></i> <strong>Categories:</strong> <a href="/">Books</a></p>
+      <p><i class="icon-tag icon-white"></i> <strong>Tags:</strong> <a href="/">green</a>, <a href="/">stories</a>, <a href="/">fantasy</a></p>
+    </div>
+  </div>
+</script>
+
+
     <div class="background">
 	<img src="img/011.small.jpg" class="image" alt="background">
 </div>

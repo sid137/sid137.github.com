@@ -8,10 +8,10 @@ App.config(function($interpolateProvider) {
 
 App.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
   $locationProvider.html5Mode(true);
-  $routeProvider.when('/', {templateUrl: 'partials/index.html'});
-  $routeProvider.when('/about', {templateUrl: 'partials/about.html'});
-  $routeProvider.when('/contact', {templateUrl: 'partials/contact.html'});
-  $routeProvider.when('/projects/:project', {templateUrl: '/partials/project_detail.html', controller: "ProjectDetailCtrl"});
+  $routeProvider.when('/', {templateUrl: 'main.html'});
+  $routeProvider.when('/about', {templateUrl: 'about.html'});
+  $routeProvider.when('/contact', {templateUrl: 'contact.html'});
+  $routeProvider.when('/projects/:project', {templateUrl: 'project_detail.html', controller: "ProjectDetailCtrl"});
   $routeProvider.otherwise({redirectTo: '/'});
 
 }]);
@@ -40,4 +40,13 @@ App.run(function($rootScope){
       description: "Front and backend web development for Billfloat.com, using Ruby on Rails"
     }
   ];
+
+  $rootScope.links = {
+    twitter_url: "https://twitter.com/sid137",
+    linked_in_url: "http://www.linkedin.com/in/sid137",
+    google_plus_url: "http://plus.google.com/105375603751571213131/about",
+    github_url: "https://github.com/sid137",
+    stack_overflow_url: "http://stackoverflow.com/users/262972/noli"
+  };
+
 });

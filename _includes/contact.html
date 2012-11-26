@@ -1,0 +1,21 @@
+<script type="text/ng-template" id="contact.html">
+  <div class="row">
+    <div class="span12">
+      <div class="span3">
+        <div class="row">
+            <h3>Connect With Me</h3>
+            <ul class="nav nav-vertical">
+              <li><a target="_blank" href="[[ links.google_plus_url ]]">Google +</a></li>
+              <li><a target="_blank" href="[[ links.twitter_url ]]">Twitter</a></li>
+              <li><a target="_blank" href="[[ links.linked_in_url ]]">Linked In</a></li>
+              <li><a target="_blank" href="[[ links.github_url ]]">Github</a></li>
+              <li><a target="_blank" href="[[ links.stack_overflow_url ]]">Stack Overflow</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="span8">
+        {% include contact_form.html %}
+      </div>
+    </div>
+  </div>
+</script>
