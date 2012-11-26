@@ -11,7 +11,7 @@ App.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   $routeProvider.when('/', {templateUrl: 'partials/index.html'});
   $routeProvider.when('/about', {templateUrl: 'partials/about.html'});
   $routeProvider.when('/contact', {templateUrl: 'partials/contact.html'});
-  $routeProvider.when('/projects/:project', {templateUrl: '../partials/project_detail.html', controller: "ProjectDetailCtrl"});
+  $routeProvider.when('/projects/:project', {templateUrl: '/partials/project_detail.html', controller: "ProjectDetailCtrl"});
   $routeProvider.otherwise({redirectTo: '/'});
 
 }]);
