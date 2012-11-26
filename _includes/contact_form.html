@@ -2,16 +2,16 @@
   <fieldset>
     <div class="clearfix">	
       <label>Your Name:</label>
-      <input tabindex="1" name="name" type="text" class="span5">	
+      <input tabindex="1" name="name" type="text" class="span5" ng-model="form_name">	
     </div>
     <div class="clearfix">
       <label>Your Email:</label>
-      <input tabindex="2" name="email" type="text" class="span5"> 
+      <input tabindex="2" name="email" type="text" class="span5" ng-model="form_email"> 
     </div>
     <div class="clearfix">
       <label>Your Comment:</label>
-      <textarea name="comment" rows="8" tabindex="5" class="span5 input-xlarge"></textarea>
+      <textarea name="comment" rows="8" tabindex="5" class="span5 input-xlarge" ng-model="form_body"></textarea>
     </div>
-    <input name="submit" tabindex="5" type="submit" value="Post Comment" class="btn btn-inverse btn-large">
+    <input name="submit" tabindex="5" type="submit" value="Post Comment" class="btn btn-inverse btn-large" ng-click="SendMessage()">
   </fieldset>
 </form>
