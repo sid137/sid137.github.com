@@ -9,8 +9,8 @@ App.config(function($interpolateProvider) {
 App.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
   $locationProvider.html5Mode(true);
   $routeProvider.when('/', {templateUrl: 'main.html'});
-  $routeProvider.when('/about', {templateUrl: 'about.html'});
-  $routeProvider.when('/contact', {templateUrl: 'contact.html'});
+  $routeProvider.when('/about.html', {templateUrl: 'about.html'});
+  $routeProvider.when('/contact.html', {templateUrl: 'contact.html'});
   $routeProvider.when('/projects/:project', {templateUrl: 'project_detail.html', controller: "ProjectDetailCtrl"});
   $routeProvider.otherwise({redirectTo: '/'});
 
