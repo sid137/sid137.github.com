@@ -17,6 +17,8 @@ App.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 }]);
 
 App.run(function($rootScope){
+  $rootScope.contact = {}; 
+
   $rootScope.projects = [
     {
       thumbnail: "img/atoms_mot.small.jpg",
