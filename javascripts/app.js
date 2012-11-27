@@ -34,7 +34,7 @@ App.run(function($rootScope){
 
   $rootScope.projects = [
     {
-      thumbnail: "img/atoms_mot.small.jpg",
+      thumbnail: "/img/atoms_mot.small.jpg",
       alt: "Magneto-optical trap containing atomic storage medium",
       page: "/projects/quantum_memory",
       name: "quantum_memory",
@@ -42,7 +42,7 @@ App.run(function($rootScope){
       description: "Developing the building blocks for the computers of tomorrow.  Storing information onto atoms using light"
     },
     {
-      thumbnail: "img/flowers-lg.jpg",
+      thumbnail: "/img/flowers-lg.jpg",
       alt: "Transcription of phone call audio",
       page: "/projects/roger",
       name: "roger", 
@@ -50,7 +50,7 @@ App.run(function($rootScope){
       description: "An application to improve the quality of life of the hearing-impaired, by providing easier communications mechanism."
     },
     {
-      thumbnail: "img/leaves-lg.jpg",
+      thumbnail: "/img/leaves-lg.jpg",
       alt: "BillFloat.com web site",
       page: "/projects/ruby_on_rails",
       name: "ruby_on_rails",
